@@ -9,6 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <resource-ref>
+    <res-ref-name>jdbc/WebsiteProject</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+  </resource-ref>
+  
   <servlet>
     <description></description>
     <display-name>TestServlet</display-name>
