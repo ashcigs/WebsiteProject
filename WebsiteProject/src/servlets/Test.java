@@ -31,7 +31,8 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().println("This is a test.");
+		String firstName = request.getParameter("firstName");
+		response.getWriter().println("Wellcome " +firstName+ " !");
 	}
 
 }
