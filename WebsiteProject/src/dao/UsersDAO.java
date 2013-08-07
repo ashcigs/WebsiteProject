@@ -23,7 +23,7 @@ public class UsersDAO
 
 		try {
 			connection = ds.getConnection();
-			String sql = "SELECT * FROM user";
+			String sql = "SELECT * FROM users";
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			ResultSet rs = stmt.executeQuery();
 			String result = null;

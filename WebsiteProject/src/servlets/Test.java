@@ -32,9 +32,9 @@ public class Test extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
 		try
 		{
+			
 			InitialContext ctx = new InitialContext();
-			ds = (DataSource) ctx
-					.lookup("java:comp/localhost:3306/WebsiteProject");
+			ds = (DataSource) ctx.lookup("java:/comp/env/jdbc/WebsiteProject");
 		}
 		catch (NamingException e)
 		{
@@ -62,7 +62,7 @@ public class Test extends HttpServlet {
 		}
 		catch (SQLException e)
 		{
-			// TODO Auto-generated catch block
+			response.getWriter().println(e);
 			e.printStackTrace();
 		}
 	}
