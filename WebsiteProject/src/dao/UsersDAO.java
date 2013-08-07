@@ -18,9 +18,21 @@ import types.User;
 public class UsersDAO
 {
 	
+	public static void CreateTable(DataSource ds){
+		Connection connection = null;
+		
+		String sqlString = "CREATE TABLE users ("
+				+ "userId nvarchar(4) NOT NULL AUTO_INCREMENT,"
+				+ "firstName nvarchar(30) NOT NULL"
+				+ "lastName nvarchar(30) NOT NULL"
+				+ "password nvarchar(30) NOT NULL"
+				+ "role TINYINT NOT NULL)";
+		
+	}
+	
 	public static String selectAllUsers (DataSource ds) throws SQLException{
 		Connection connection = null;
-
+		
 		try {
 			connection = ds.getConnection();
 			String sql = "SELECT * FROM users";

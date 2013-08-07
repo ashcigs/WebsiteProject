@@ -7,11 +7,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<form action="Test" method="post">
-			<label>Enter your name: </label>
+		Register form:
+		<br>
+		<form action="RegistrationServlet" method="post">
+			<label>Enter your first name: </label>
 			<br>
 			<input type="textbox" name="firstName">
+			<br>
+			<label>Enter your last name: </label>
+			<br>
+			<input type="textbox" name="lastName">
+			<br>
+			<label>Enter password: </label>
+			<br>
+			<input type="password" name="password">
+			<br>
+			<label>Confirm password: </label>
+			<br>
+			<input type="password" name="confirmPassword">
+			<br>
 			<input type="submit" value="go">
 		</form>
 </body>
-</html>
+</html> 
