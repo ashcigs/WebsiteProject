@@ -18,9 +18,9 @@ public class User
 //		this.setUserId(UUID.nameUUIDFromBytes(rand).toString());
 		
 		//incremental id generation
-//		num = num + 1;
+		num++;
 		
-		this.setUserId(++num);
+		this.setUserId(num); //for test -> Every object should have unique id now.
 		this.setFirstName(null);
 		this.setLastName(null);
 		this.setPassword(null);
