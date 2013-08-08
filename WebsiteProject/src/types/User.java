@@ -4,12 +4,12 @@ import java.util.UUID;
 
 public class User
 {
-	private Object userId;
-	private Object firstName;
-	private Object lastName;
-	private Object password;
-	private Object role;
-	private static int num = 3916000;
+	private int userId;
+	private String firstName;
+	private String lastName;
+	private String password;
+	private short role;
+//	private static int num = 3916000;
 
 	public User()
 	{
@@ -18,70 +18,83 @@ public class User
 //		this.setUserId(UUID.nameUUIDFromBytes(rand).toString());
 		
 		//incremental id generation
-		num++;
+//		num++;
+//		
 		
-		this.setUserId(num); //for test -> Every object should have unique id now.
+		this.setUserId(0);
 		this.setFirstName(null);
 		this.setLastName(null);
 		this.setPassword(null);
-		this.setRole(1);
+		this.setRole((short)0);
 		
 	}
 	
-	public User(String firstName, String lastName, String password){
+	public User(int userId, String firstName, String lastName, String password, short role){
 		this(); 
+		this.setUserId(userId);
 		this.setFirstName(firstName);
 		this.setLastName(lastName);
 		this.setPassword(password);
+		this.setRole(role);
 	}
 
-	public Object getUserId()
-	{
-		return userId;
-	}
+//	public int getUserId()
+//	{
+//		return userId;
+//	}
+//
+//	public void setUserId(int userId)
+//	{
+//		this.userId = userId;
+//	}
 
-	public void setUserId(Object userId)
-	{
-		this.userId = userId;
-	}
-
-	public Object getFirstName()
+	public String getFirstName()
 	{
 		return firstName;
 	}
 
-	public void setFirstName(Object firstName)
+	public void setFirstName(String firstName)
 	{
 		this.firstName = firstName;
 	}
 
-	public Object getLastName()
+	public String getLastName()
 	{
 		return lastName;
 	}
 
-	public void setLastName(Object lastName)
+	public void setLastName(String lastName)
 	{
 		this.lastName = lastName;
 	}
 
-	public Object getPassword()
+	public String getPassword()
 	{
 		return password;
 	}
 
-	public void setPassword(Object password)
+	public void setPassword(String password)
 	{
 		this.password = password;
 	}
 
-	public Object getRole()
+	public short getRole()
 	{
 		return role;
 	}
 
-	public void setRole(Object role)
+	public void setRole(short role)
 	{
 		this.role = role;
+	}
+
+	public int getUserId()
+	{
+		return userId;
+	}
+
+	public void setUserId(int userId)
+	{
+		this.userId = userId;
 	}
 }

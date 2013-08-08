@@ -26,7 +26,22 @@
 			<br>
 			<input type="password" name="confirmPassword">
 			<br>
-			<input type="submit" value="go">
+			<input type="submit" value="Register">
+		</form>
+		
+		Login form:
+		<br>
+			<form action="LoginServlet" method="post">
+			<label>Enter your first name: </label>
+			<br>
+			<label>Enter ID:</label>
+			<br>
+			<input type="textbox" name="userId">
+			<label>Enter password: </label>
+			<br>
+			<input type="password" name="password">
+			<br>
+			<input type="submit" value="Login">
 		</form>
 </body>
 </html> 

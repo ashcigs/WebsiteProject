@@ -54,17 +54,7 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String firstName = request.getParameter("firstName");
-		try
-		{
-			String result = UsersDAO.selectAllUsers(ds);
-			response.getWriter().println("Wellcome " +result+ " !");
-		}
-		catch (SQLException e)
-		{
-			response.getWriter().println(e);
-			e.printStackTrace();
-		}
+		
 	}
 
 }
